@@ -6,7 +6,10 @@ ruby '2.5.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development, :test do
+  #it only compiles in the development or test environments
+  gem 'sqlite3'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -46,6 +49,10 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
+group :production do
+  # is a gem that communicates with PostgreSQL databases.This is the type of database your Heroku server will be running.
+  gem 'pg'
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
