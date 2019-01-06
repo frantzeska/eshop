@@ -1,6 +1,7 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* { box-sizing: border-box; }
 h1{
   text-align: left;
   font-family: verdana, arial, sans-serif;
@@ -17,4 +18,9 @@ footer {
   width: 100%;
   text-align: center;
   font-weight: 400;
+}
+.content {
+  margin: 0 auto;
+  width: 80%;
+  padding: 20px;
 }
