@@ -19,8 +19,19 @@ footer {
   text-align: center;
   font-weight: 400;
 }
-.content {
+.content,.ContactContent, .AboutContent {
   margin: 0 auto;
   width: 80%;
   padding: 20px;
+  margin: 40px;
+}
+nav{
+  position: fixed;
+  width: 100% !important; /*me to !important kaluptei olo to euros tis othonis, gia na kanw overwrite to width 80% pou exw orisei parapanw gia to container */
+  top: 0; /*gia na einai panw panw */
+  left: 0; /*gia na kollisei aristera */
+  background-color: #ff99cc;
+  font-weight: 500;
+  padding:20px;
+  z-index: 50000;
 }
