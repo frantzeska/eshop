@@ -21,7 +21,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
+        <div class="navbar-nav">
           <%= link_to "Home", root_path %> <span class="sr-only">(current)</span>
           <%= link_to "About", simple_pages_about_path %>
           <%= link_to "Contact", simple_pages_contact_path %>
@@ -29,27 +29,7 @@
       </div>
     </nav>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation" id="navbar-example">
-    <a class="navbar-brand" href="#">Book Store</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto"> <!--to mr-auto ta pigaine ola aristera, to ml-auto krataei mono to brand aristera k ola ta alla ta paei deksia -->
-      <li class="nav-item active">
-        <%= link_to "Home", root_path %> <span class="sr-only">(current)</span>
-      </li>
-      <li class="nav-item">
-        <%= link_to "About", simple_pages_about_path %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Contact", simple_pages_contact_path %>
-      </li>
-    </ul>
-  </div>
- </nav> <!-- end navbar-->
-
+  
     <%= yield %>
 
     <footer>
