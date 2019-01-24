@@ -8,8 +8,7 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
+
       <div class="carousel-inner">
         <% @products.each do |product| %>
           <div class="carousel-item<%= " active" if product == @products.first %>">
@@ -21,8 +20,7 @@
           </div>
           <% end %>
       </div>
-    </div>
-  </div>
+    
 
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
