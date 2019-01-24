@@ -4,7 +4,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.limit(3) #limit the products to the first three
+    #@products = Product.all  (takes all the products from the database)
   end
 
   # GET /products/1
