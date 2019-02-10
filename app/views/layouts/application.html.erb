@@ -22,6 +22,12 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+        <%= form.label :q, 'Search for:' %>
+        <%= form.text_field :q, id: 'q', value: params[:q] %>
+        <%= form.submit 'Search' %>
+      <% end %>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto"> <!--to mr-auto ta pigaine ola aristera, to ml-auto krataei mono to brand aristera k ola ta alla ta paei deksia -->
         <li class="nav-item active">
@@ -36,12 +42,6 @@
         <li class="nav-item">
           <%= link_to "Products", products_path %>
         </li>
-        <li class="nav-item">
-          <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-            <%= form.label :q, 'Search for:' %>
-            <%= form.text_field :q, id: 'q', value: params[:q] %>
-            <%= form.submit 'Search' %>
-          <% end %>
       </ul>
     </div>
    </nav> <!-- end navbar-->
