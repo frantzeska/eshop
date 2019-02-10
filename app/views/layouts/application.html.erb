@@ -21,9 +21,9 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <div class="nav-item">
-      <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+      <%= form_with(url: products_path, method: 'get', class: 'navbar-form', local: true) do |form| %>
         <%= form.label :q, 'Search for:' %>
         <%= form.text_field :q, id: 'q', value: params[:q] %>
         <%= form.submit 'Search' %>
