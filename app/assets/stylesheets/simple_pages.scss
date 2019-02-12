@@ -36,13 +36,16 @@ nav{
   padding:20px;
   z-index: 50000;
 }
+nav a{
+  color: white;
+}
 #navbarSupportedContent a {
   padding: 10px;
 }
 .navbar-form{
   margin-left: 10px;
 }
-a.navbar-brand{
+.navbar-brand{
   font-size: 1.2em;
-  color: #944dff;
+  color: red;
 }
