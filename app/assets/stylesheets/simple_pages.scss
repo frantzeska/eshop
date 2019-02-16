@@ -26,7 +26,29 @@ footer {
   padding: 20px;
   margin: 40px;
 }
-
+.form-group{
+  margin-top: 10px;
+  margin-left: 50px;
+  width: 33%;
+}
+label{
+  font-size: 1.3em;
+  line-height: 1em;
+}
+.form-control{
+  font-size: 1.3em;
+  color: #080808;
+}
+textarea.form-control {
+  height: 135px;
+}
+.submit{
+  font-size: 1.1em;
+  float: right;
+  width: 150px;
+  background-color: transparent;
+  color: #fff;
+}
 nav{
   position: fixed;
   width: 100% !important; /*me to !important kaluptei olo to euros tis othonis, gia na kanw overwrite to width 80% pou exw orisei parapanw gia to container */
