@@ -1,7 +1,8 @@
 <div class="ContactContent">
   <h1>Contact us</h1>
   <p>Not able to find what are you looking for? Please feel free to send us an email at help@bookstore.com </p>
-
+</div>
+<div class="contact-form">
   <%= flash[:notice] %>
 
   <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
@@ -17,7 +18,7 @@
       <%= form.label :message %>
       <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
     </div>
-    
+
   <%= form.submit "Send", class: "form_label" %>
   <% end %>
 </div>
