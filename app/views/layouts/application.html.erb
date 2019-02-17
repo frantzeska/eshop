@@ -44,22 +44,18 @@
         <li class="nav-item">
           <%= link_to "Products", products_path %>
         </li>
+      </ul>
 
+      <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Users", users_path %>
-        </li>
-        <% end %>
-        <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link") %>
         </li>
         <% else %>
         <li class="nav-item">
-          <%= link_to('Login', new_user_session_path) %>
+          <%= link_to('Login', new_user_session_path, class: "nav-link") %>
         </li>
-      <% end %>
-
+        <% end %>
       </ul>
     </div>
    </nav> <!-- end navbar-->
