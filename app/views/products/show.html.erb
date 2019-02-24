@@ -1,5 +1,8 @@
 <div class="main-content">
   <p id="notice"><%= notice %></p>
+  <div class="col-sm">
+  	<%= @product.highest_rating_comment %>
+  </div>
 
   <p>
     <strong>Name:</strong>
@@ -26,5 +29,5 @@
     <%= @product.price %>
   </p>
 </div>
-  <%= link_to 'Edit', edit_product_path(@product) %> 
+  <%= link_to 'Edit', edit_product_path(@product) %>
   <%= link_to 'Back', products_path %>
