@@ -2,7 +2,7 @@
   <div class="row">
       <div class="col-sm">
         <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
-        <%= product.name %>
+        <%= link_to product.name, product %>
         <%= product.description %>
         <%= product.price %>
       </div><!-- /col -->
