@@ -1,5 +1,5 @@
 <% if signed_in? %>
-  <p class="text-bold">Please write for this product a review</p>
+  <h4>Please write for this product a review</h4>
   <!--<h4>Add a review:</h4>-->
   <%= form_for([@product, @product.comments.build]) do |f| %>
     <div class= "form-group">
@@ -7,7 +7,7 @@
       <%= f.text_area :body %>
     </div>
 
-    <div class= "rating">
+    <div class= "form-group">
       <%= f.label :rating %><br>
       <%= f.text_field :rating, class: "rating" %>
     </div>
