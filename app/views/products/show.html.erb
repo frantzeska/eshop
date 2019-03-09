@@ -39,4 +39,4 @@
   <%= render 'comments' %>
   <%= link_to 'Edit', edit_product_path(@product) %>
   <%= link_to 'Back', products_path %>
-  <%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
+  <%= will_paginate @comments, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
