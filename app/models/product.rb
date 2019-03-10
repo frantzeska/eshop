@@ -5,9 +5,9 @@ class Product < ApplicationRecord
   #requires all new products to have a name provided
   validates :name, presence: true
   validates :description, presence: true
-  validates :image_url, presence: true
-  validates :colour, presence: true
-  validates :price, presence: true
+  #validates :image_url, presence: true
+  #validates :colour, presence: true
+  validates :price, numericality: true #specify that both floats and integers are accepted
 
   def self.search(search_term)
     if Rails.env.development? # use "ilike" matching operator for postgres to ignore upper- and lower-case
