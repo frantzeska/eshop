@@ -7,10 +7,10 @@ class Ability
       can :read, :all
       #can :manage, User, id: user.id
     if user.present?  # additional permissions for logged in users (they can manage their posts)
-      can :manage, Post, user_id: user.id
+      can :create, Comment, user_id: user.id
     # Define abilities for the passed in user here. For example:
     #
-    else
+    if
       user.admin? #administrator
       can :manage, :all
     end
