@@ -40,7 +40,7 @@
   <%= link_to 'Edit', edit_product_path(@product) %>
   <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
   <%= link_to 'Back', products_path %>
-   <%= render 'comments' %>
+
   <div class="pagination">
     <%= will_paginate @comments, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
   </div>
