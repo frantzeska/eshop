@@ -61,13 +61,14 @@ nav{
   top: 0; /*gia na einai panw panw */
   left: 0; /*gia na kollisei aristera */
   //background-color: #ff99cc;
-  font-weight: 600;
+  font-weight: 500;
   padding:20px;
   color: white;
   //z-index: 50000;
 }
 nav a{
   color: white;
+  font-size: 1em;
   //color: #944dff;
   //font-weight: 700;
 }
@@ -80,6 +81,6 @@ nav a{
 
 a.navbar-brand{
   color:#CCCC99 !important;/*#ff99cc  rozaki*/
-  font-size: 1em;
+  font-size: 1.3em;
   font-weight: 700;
 }
