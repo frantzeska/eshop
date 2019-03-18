@@ -61,12 +61,15 @@ nav{
   top: 0; /*gia na einai panw panw */
   left: 0; /*gia na kollisei aristera */
   //background-color: #ff99cc;
-  font-weight: 500;
+  font-weight: 600;
   padding:20px;
+  color: white;
   //z-index: 50000;
 }
 nav a{
-  color: white;
+  //color: white;
+  color: #944dff;
+  font-weight: 700;
 }
 #navbarSupportedContent a {
   padding: 10px;
