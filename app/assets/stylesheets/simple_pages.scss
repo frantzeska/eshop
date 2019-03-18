@@ -2,12 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 * { box-sizing: border-box; }
+body{
+  background-color: #fffeea;
+}
 h1{
   text-align: left;
-  font-family: verdana, arial, sans-serif;
+  //font-family: verdana, arial, sans-serif;
   color: #6699ff;
   font-weight: 400;
   padding: 20px;
+  font-family: Georgia,Times,"Times New Roman",serif;
 }
 // Footer
 
