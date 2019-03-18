@@ -60,10 +60,10 @@ nav{
   width: 100% !important; /*me to !important kaluptei olo to euros tis othonis, gia na kanw overwrite to width 80% pou exw orisei parapanw gia to container */
   top: 0; /*gia na einai panw panw */
   left: 0; /*gia na kollisei aristera */
-  //background-color: #ff99cc;
-  font-weight: 500;
   padding:20px;
   color: white;
+  background-color: #ff99cc;
+  font-weight: 900;
   //z-index: 50000;
 }
 nav a{
@@ -71,6 +71,16 @@ nav a{
   font-size: 1em;
   //color: #944dff;
   //font-weight: 700;
+}
+nav a:hover {
+  color: #ff0;
+  text-decoration: none;
+  transition: color 600ms;
+  -webkit-transition: color 600ms; /*gia na to ktlv kai alloi browsers i.e. safari */
+  -moz-transition: color 600ms; /*gia na douleuei kai se Firefox */
+  color: white; /*gt den allazoun xrwma ta grammata na ginoun leuka? */
+  font-size: 1em; /*ekane terastia ta grammata dioti 1em=16px */
+  font-weight: 900; /*exei na kanei me to poso entona einai ta grammata, to max einai to 900*/
 }
 #navbarSupportedContent a {
   padding: 10px;
