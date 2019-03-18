@@ -2,7 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-
+    can :read, :all    # permissions for every user, even if not logged in
     if user.nil?
       user = User.new
     elsif
@@ -16,7 +16,7 @@ class Ability
       can [:show, :index], Product
     # Define abilities for the passed in user here. For example:
     #
- 
+
     end
     #   else
     #     can :read, :all
