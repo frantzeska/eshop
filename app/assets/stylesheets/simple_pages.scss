@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 * { box-sizing: border-box; }
-body{
-  background-color: #fffeea;
-}
 h1{
   text-align: left;
   //font-family: verdana, arial, sans-serif;
@@ -89,6 +86,15 @@ nav a:hover {
 a.navbar-brand{
   color:#CCCC99 !important;
   font-size: 1.3em;
+  font-weight: 700;
+}
+a.navbar-brand:hover{
+  text-decoration: none;
+  transition: color 600ms;
+  -webkit-transition: color 600ms; /*gia na to ktlv kai alloi browsers i.e. safari */
+  -moz-transition: color 600ms; /*gia na douleuei kai se Firefox */
+  color: white; /*gt den allazoun xrwma ta grammata na ginoun leuka? */
+  font-size: 1.3em; /*ekane terastia ta grammata dioti 1em=16px */
   font-weight: 700;
 }
 nav label{
