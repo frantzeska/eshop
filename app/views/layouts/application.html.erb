@@ -4,7 +4,6 @@
     <title>Eshop</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link href="/bootstrap4-glyphicons/css/bootstrap-glyphicons.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,7 +16,6 @@
   </head>
 
   <body>
-    <div class="alertNotice">
       <% if notice %>
         <p class="alert alert-success success-note" role="alert"><%= notice %></p>
       <% end %>
@@ -25,7 +23,7 @@
       <% if alert %>
         <p class="alert alert-danger alert-note" role="alert"><%= alert %></p>
       <% end %>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation" id="navbar-example">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation" id="navbar-example">
       <!--<a class="navbar-brand" href="#">Book Store</a>-->
       <%= link_to "Book Store", simple_pages_index_path, class: "navbar-brand" %> <span class="sr-only">(current)</span>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

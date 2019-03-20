@@ -26,13 +26,16 @@ a {
   &:visited {
     color: #666;
   }
+}
+
+.navbar-nav a {
+  color: #000;
 
   &:hover {
     color: #fff;
     background-color: #000;
   }
 }
-
 th {
   padding-bottom: 5px;
 }

@@ -8,7 +8,7 @@ h1{
   color: #6699ff;
   font-weight: 400;
   padding: 20px;
-  font-family: Georgia,Times,"Times New Roman",serif;
+  font-family: "Lobster";
 }
 // Footer
 
@@ -23,7 +23,10 @@ footer {
   left:0;
   z-index: 50000;
 }
-.content,.ContactContent, .AboutContent, .products, .landing_page, .new-product, .panel-body, .logInDetails, .signUpDetails, .alertNotice {
+.products{
+  margin: 40px;
+}
+.content,.ContactContent, .AboutContent, .landing_page, .new-product, .panel-body, .logInDetails, .signUpDetails {
   margin: 0 auto;
   width: 80%;
   padding: 20px;
