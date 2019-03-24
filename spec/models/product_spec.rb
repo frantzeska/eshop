@@ -27,8 +27,8 @@ describe Product do #tell RSpec which model we want to test
             expect(Product.new(name: "book", description: "Nice Book", price:"")).not_to be_valid
         end
 
-        it "is valid with name and description" do
-            expect(User.new(name: "book", description: "Nice book", price: 100)).to be_valid
+        it "is valid with name, description and price" do
+            expect(Product.new(name: "book", description: "Nice book", price: 100)).to be_valid
         end
   end
 end
