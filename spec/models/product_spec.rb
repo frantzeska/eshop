@@ -2,7 +2,7 @@ require 'rails_helper' # in order to get access to the configuration we need to 
 
 describe Product do #tell RSpec which model we want to test
   context "when the product has comments" do
-        let(:product) { Product.create!(name: "book") }
+        let(:product) { Product.create!(name: "book", description:"I am a description") }
         let(:user) {User.create!(email: "test@gmail.com", password: "password")}
 
         before do
@@ -18,5 +18,6 @@ describe Product do #tell RSpec which model we want to test
         it "is not valid without a name" do
             expect(Product.new(description: "Nice book")).not_to be_valid
         end
+        
   end
 end
