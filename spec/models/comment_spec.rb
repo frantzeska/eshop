@@ -7,7 +7,7 @@ describe Comment do
 
         before do
             product.comments.create!(body: "this is a very good book.")
-        end
+
         it "not valid without a body" do
           expect(comment.body).not_to be_valid
         end
@@ -16,4 +16,5 @@ describe Comment do
           expect(product.comments.new(body: "this is a very good book.", rating:5)).to be_valid
         end
     end
+  end
 end
