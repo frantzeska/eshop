@@ -12,7 +12,11 @@ describe Product do #tell RSpec which model we want to test
         end
 
         it "returns the average rating of all comments" do
-        expect(product.average_rating).to eq 3.0  
+          expect(product.average_rating).to eq 3.0
+        end
+
+        it "is not valid without a name" do
+            expect(Product.new(description: "Nice book")).not_to be_valid
         end
   end
 end
