@@ -6,15 +6,15 @@ describe Order do
     let(:user) {User.create!(email: "test@gmail.com", password: "password")}
 
     it "is a valid order" do
-      expect(Order.new( user: user, product: product, total: 100, price:100)).to be_valid
+      expect(Order.new( user: user, product: product, total: 100)).to be_valid
     end
 
     it "is not valid without a user" do
-      expect(Order.new(product: product, total: 100, price:100)).not_to be_valid
+      expect(Order.new(product: product, total: 100)).not_to be_valid
     end
 
     it "is not valid without product" do
-      expect(Order.new( user: user, total: 100, price:100)).not_to be_valid
+      expect(Order.new( user: user, total: 100)).not_to be_valid
     end
 
 
