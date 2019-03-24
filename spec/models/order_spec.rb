@@ -17,11 +17,5 @@ describe Order do
       expect(Order.new( user: user, product: "", total: 100, description:"I am a description", price:100)).not_to be_valid
     end
 
-    it "is not valid without description" do
-      expect(Order.new( user: user, product: product, total: 100, description:"", price:100)).not_to be_valid
-    end
 
-    it "is not valid without price" do
-      expect(Order.new( user: user, product: product, total: 100, price:"")).not_to be_valid
-    end
 end
