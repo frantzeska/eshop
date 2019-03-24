@@ -6,10 +6,6 @@ ruby '2.5.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
-group :development, :test do
-  #it only compiles in the development or test environments
-  gem 'sqlite3'
-end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -40,8 +36,11 @@ gem 'jquery-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
+  #it only compiles in the development or test environments
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.8'
 end
 
 group :development do
@@ -61,7 +60,3 @@ gem 'cancancan', '~> 1.10'
 
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap4'
-
-group :development, :test do
-  gem 'rspec-rails', '~> 3.8'
-end
