@@ -16,8 +16,15 @@ describe Product do #tell RSpec which model we want to test
         end
 
         it "is not valid without a name" do
-            expect(Product.new(description: "Nice book")).not_to be_valid
+            expect(Product.new(name: "", description: "Nice book")).not_to be_valid
         end
-        
+
+        it "is not valid without a description" do
+            expect(Product.new(name: "book", description: "")).not_to be_valid
+        end
+
+        it "is valid with name and description" do
+            expect(User.new(name: "book", description: "Nice book")).to be_valid
+        end
   end
 end
