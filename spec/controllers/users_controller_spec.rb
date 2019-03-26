@@ -1,19 +1,19 @@
 require 'rails_helper'
 
 describe UsersController, type: :controller do
-  let(:user1) { User.create!(email: 'email1@example.com', password: 'password1') }
+  let(:user) { User.create!(email: 'email1@example.com', password: 'password1') }
   let(:user2) { User.create!(email: 'emails2@example.com', password: 'password2') }
 
   describe 'GET #show' do
      context 'when a user is logged in' do
        before do
-        sign_in user1
+        sign_in user
       end
 
       it 'loads correct user details' do
-         get :show, params: {id: user1.id}
+         get :show, params: {id: user.id}
          expect(response).to be_ok
-         expect(assigns(:user)).to eq user1
+         expect(assigns(:user)).to eq user
        end
 
        it "it can't access the Show page of the second user" do
