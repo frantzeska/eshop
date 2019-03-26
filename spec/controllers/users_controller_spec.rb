@@ -19,7 +19,7 @@ describe UsersController, type: :controller do
        it "it can't access the Show page of the second user" do
          get :show, params: {id: user2.id}
          #expect(response).not_to be_ok
-         expect(response).to redirect_to('simple_pages#landing_page')
+         expect(response).to redirect_to(root_path : redirect)
        end
 
     end
