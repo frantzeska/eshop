@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Order do
 
-    let(:product) { Product.create!(name:"book")}
+    let(:product) { Product.create!(name:"book", description:"I am a description", price:100)}
     let(:user) {User.create!(email: "test@gmail.com", password: "password")}
 
     it "is a valid order" do
