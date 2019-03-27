@@ -7,7 +7,7 @@ describe CommentsController, type: :controller do
 
     context 'when a user is logged in' do
      before do
-       sign_in sign
+       sign_in user
      end
 
      it 'can create comment' do
