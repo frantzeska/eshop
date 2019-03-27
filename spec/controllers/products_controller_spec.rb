@@ -36,7 +36,7 @@ describe ProductsController, type: :controller do
     end
     it 'redirects to edit product page' do
       get :edit, params: {id: product}
-      expect(response).to be_successful
+      expect(response).to have_http_status(302)
     end
   end
 
