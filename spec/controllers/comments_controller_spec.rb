@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe CommentsController, type: :controller do
 
-  let(:user){ Comment.create(:user) }
-  let(:product){ Product.create!(name: "book")}
+  let(:user) {User.create!(email: "test@gmail.com", password: "password")}
+  let(:product) { Product.create!(name: "book", description:"I am a description", price:100) }
 
     context 'when a user is logged in' do
      before do
