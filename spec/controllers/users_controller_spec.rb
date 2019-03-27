@@ -18,7 +18,7 @@ describe UsersController, type: :controller do
 
        it "it can't access the Show page of the second user" do
          get :show, params: {id: user2.id}
-         expect(response).to have_http_status(300)
+         expect(response).to have_http_status(100)
          expect(response).to redirect_to(root_path)
        end
 
