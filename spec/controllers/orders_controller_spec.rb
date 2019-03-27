@@ -13,7 +13,7 @@ describe OrdersController, type: :controller do
 
     it "is a valid order" do
       post :create, params: { product_id: product.id, order: { user: user, product: product, total: 1 } }
-      expect(response).to have_http_status(302)
+      expect(response).to have_http_status(204)
     end
   end
  end
