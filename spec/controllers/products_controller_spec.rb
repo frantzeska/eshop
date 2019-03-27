@@ -26,7 +26,7 @@ describe ProductsController, type: :controller do
     end
     it 'redirects to new product page' do
       get :new, params: {id: product}
-      expect(response).to be_successful
+      expect(response).to have_http_status(201)
     end
   end
 
