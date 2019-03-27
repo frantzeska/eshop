@@ -26,7 +26,7 @@ describe ProductsController, type: :controller do
     end
     it 'redirects to new product page' do
       get :new, params: {id: product}
-      expect(response).to be_ok
+      expect(response).to be_successful
     end
   end
 
@@ -36,7 +36,7 @@ describe ProductsController, type: :controller do
     end
     it 'redirects to edit product page' do
       get :edit, params: {id: product}
-      expect(response).to be_ok
+      expect(response).to be_successful
     end
   end
 
@@ -62,7 +62,7 @@ describe ProductsController, type: :controller do
     it 'deletes product' do
       expect(Product.new(name: "book", description: "Nice book", price: 100))
       delete :destroy, params: { id: product.id }
-      expect(response).to redirect_to products_url
+      expect(response).to redirect_to (root_path)
     end
   end
 
