@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe UsersController, type: :controller do
   let(:user) { User.create!(email: 'email1@example.com', password: 'password1') }
-  let(:user2) { User.create!(email: 'emails2@example.com', password: 'password2') }
+  #let(:user2) { User.create!(email: 'emails2@example.com', password: 'password2') }
 
   describe 'GET #show' do
      context 'when a user is logged in' do
@@ -17,8 +17,8 @@ describe UsersController, type: :controller do
        end
 
        it "it can't access the Show page of the second user" do
-         #get :show, params: {id: user2.id}
-         #expect(response).to have_http_status(302)
+         get :show, params: {id: user2.id}
+         expect(response).to have_http_status(302)
          expect(response).to redirect_to(root_path)
        end
 
