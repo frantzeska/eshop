@@ -17,7 +17,7 @@ class Ability
     # Define abilities for the passed in user here. For example:
     #
 
-    #end
+    end
     #   else
     #     can :read, :all
     #   end
