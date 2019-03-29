@@ -16,7 +16,7 @@ describe UsersController, type: :controller do
       it 'loads correct user details' do
          get :show, params: {id: @user.id}
          expect(response).to be_ok
-         expect(assigns(:user)).to eq user
+         expect(assigns(:user)).to eq @user
        end
 
        it "it can't access the Show page of the second user" do
