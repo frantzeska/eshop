@@ -4,17 +4,17 @@ class Ability
   def initialize(user)
     can :read, :all    # permissions for every user, even if not logged in
     if user.nil?
-      user = User.new
+      user ||= User.new
     elsif
       user.admin? #administrator
       can :manage, :all
-    #else
+    else
       #user ||= User.new # guest user (not logged in)
-    #  can :manage, User, id: user.id
-    #  can [:show, :index], Order, user_id: user.id
-    #  can :create, Comment, user_id: user.id
-    #  can [:show, :index], Product
-    # Define abilities for the passed in user here. For example:
+      can :manage, User, id: user.id
+      can [:show, :index], Order, user_id: user.id
+      can :create, Comment, user_id: user.id
+      can [:show, :index], Product
+     #Define abilities for the passed in user here. For example:
     #
 
     end
