@@ -4,7 +4,7 @@ FactoryBot.define do
     factory :product do
       name
       price 10.0
-      description "Test description"
+      description {"Test description"}
     end
 
   end
