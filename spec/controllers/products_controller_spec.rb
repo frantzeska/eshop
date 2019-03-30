@@ -2,8 +2,12 @@ require 'rails_helper'
 
 describe ProductsController, type: :controller do
 
-  let(:user) {User.create!(email: "test@gmail.com", password: "password")}
-  let(:product) { Product.create!(name: "book", description:"I am a description", price:100) }
+  #let(:user) {User.create!(email: "test@gmail.com", password: "password")}
+  #let(:product) { Product.create!(name: "book", description:"I am a description", price:100) }
+  before do
+    @product = FactoryBot.create(:product)
+    @user = FactoryBot.create(:user)
+  end
 
   describe 'GET #index' do
     it 'renders products index template' do
@@ -15,37 +19,38 @@ describe ProductsController, type: :controller do
 
   describe 'GET #show' do
     it 'renders products page' do
-      get :show, params: {id: product}
+      get :show, params: {id: @product}
       expect(response).to be_ok
     end
   end
 
   describe 'GET #new' do
     before do
-      sign_in user
+      sign_in @user
     end
     it 'redirects to new product page' do
-      get :new, params: {id: product}
+      get :new, params: {id: @product}
       expect(response).to have_http_status(302)
     end
   end
 
   describe 'GET #edit' do
     before do
-      sign_in user
+      sign_in @user
     end
     it 'redirects to edit product page' do
-      get :edit, params: {id: product}
+      get :edit, params: {id: @product}
       expect(response).to have_http_status(302)
     end
   end
 
   describe 'POST #create' do
     before do
-      sign_in user
+      sign_in @user
     end
     it 'creates a new product' do
-      expect(Product.new(name: "book", description: "Nice book", price: 100))
+      #expect(Product.new(name: "book", description: "Nice book", price: 100))
+      @product = FactoryBot.create(:product)
       expect(response).to be_successful
     end
     #it 'cannot create new product' do
@@ -57,11 +62,12 @@ describe ProductsController, type: :controller do
 
   describe 'DElETE #destroy' do
     before do
-      sign_in user
+      sign_in @user
     end
     it 'deletes product' do
-      expect(Product.new(name: "book", description: "Nice book", price: 100))
-      delete :destroy, params: { id: product.id }
+      #expect(Product.new(name: "book", description: "Nice book", price: 100))
+      @product = FactoryBot.create(:product)
+      delete :destroy, params: { id: @product.id }
       expect(response).to redirect_to (root_path)
     end
   end
