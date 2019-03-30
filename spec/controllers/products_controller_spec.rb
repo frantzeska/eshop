@@ -60,7 +60,7 @@ describe ProductsController, type: :controller do
 
 
 
-  describe 'DElETE #destroy' do
+  describe 'DELETE #destroy' do
     before do
       sign_in @user
     end

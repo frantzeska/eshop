@@ -4,7 +4,7 @@ class Ability
   def initialize(user)
     #can :read, :all    # permissions for every user, even if not logged in
     if user.nil?
-      user ||= User.new
+     user ||= User.new  
     elsif
       user.admin? #administrator
       can :manage, :all
