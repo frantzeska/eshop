@@ -7,12 +7,9 @@ describe ProductsController, type: :controller do
   before do
     @product = FactoryBot.create(:product)
     @user = FactoryBot.create(:user)
-  end
-
-  before do
     sign_in @user
   end
-  
+
   describe 'GET #index' do
     it 'renders products index template' do
       get :index
