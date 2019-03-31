@@ -9,6 +9,10 @@ describe ProductsController, type: :controller do
     @user = FactoryBot.create(:user)
   end
 
+  before do
+    sign_in @user
+  end
+  
   describe 'GET #index' do
     it 'renders products index template' do
       get :index
