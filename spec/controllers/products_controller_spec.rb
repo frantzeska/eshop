@@ -26,9 +26,6 @@ describe ProductsController, type: :controller do
   end
 
   describe 'GET #new' do
-    before do
-      sign_in @user
-    end
     it 'redirects to new product page' do
       get :new, params: {id: @product}
       expect(response).to have_http_status(302)
@@ -36,19 +33,13 @@ describe ProductsController, type: :controller do
   end
 
   describe 'GET #edit' do
-    before do
-      sign_in @user
-    end
-    it 'redirects to edit product page' do
+    it'redirects to edit product page' do
       get :edit, params: {id: @product}
       expect(response).to have_http_status(302)
     end
   end
 
   describe 'POST #create' do
-    before do
-      sign_in @user
-    end
     it 'creates a new product' do
       #expect(Product.new(name: "book", description: "Nice book", price: 100))
       @product = FactoryBot.create(:product)
@@ -62,9 +53,6 @@ describe ProductsController, type: :controller do
 
 
   describe 'DELETE #destroy' do
-    before do
-      sign_in @user
-    end
     it 'deletes product' do
       #expect(Product.new(name: "book", description: "Nice book", price: 100))
       @product = FactoryBot.create(:product)
