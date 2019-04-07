@@ -94,6 +94,8 @@ GEM
     ffi (1.9.25)
     ffi (1.9.25-x64-mingw32)
     ffi (1.9.25-x86-mingw32)
+    friendly_id (5.2.5)
+      activerecord (>= 4.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     haml (4.0.7)
@@ -274,6 +276,7 @@ DEPENDENCIES
   devise
   duktape
   factory_bot_rails (~> 4.0)
+  friendly_id (~> 5.2.4)
   jbuilder (~> 2.5)
   jquery-rails
   pg
