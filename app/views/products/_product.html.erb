@@ -1,5 +1,5 @@
 <div class="col-lg-3">
-  <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
+  <%= image_tag(product.image_url, class: "img-fluid img-zoom") unless product.image_url.nil? %>
   <%= link_to product.name, product %>
   <% logger.debug "Product name is #{product.name}"%>
   <%= product.description %>
