@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Product.destroy_all
 Order.destroy_all
-Product.create(name: "seed-generated product", description: "I also created this product without using the HTML form!", price: 99)
+Product.create(name: "seed-generated product", description: "I also created this product without using the HTML form!", img_url: "http://media.istockphoto.com/photos/kitten-on-a-white-background-picture-id511458158?k=6&m=511458158&s=170667a&w=0&h=YS27-I0nj5x89iDRUZ2YxE77hEghPb0HNCWwPCrMmn8=" price: 99)
 Order.create(user_id: 1, product_id: 1, total: 99)
