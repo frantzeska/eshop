@@ -1,6 +1,7 @@
 <div class="main-content">
   <p id="notice"><%= notice %></p>
 
+  <% cache @product do %>
   <p>
     <strong>Name:</strong>
     <%= @product.name %>
@@ -10,6 +11,7 @@
     <strong>Description:</strong>
     <%= @product.description %>
   </p>
+  <% end %>
 
   <p>
     <strong>Image url:</strong>
