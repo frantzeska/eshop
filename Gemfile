@@ -68,3 +68,4 @@ gem 'stripe'
 gem "brakeman"
 gem 'friendly_id', '~> 5.2.4' # Note: You MUST use 5.0.0 or greater for Rails 4.0+ -Svenja asked me to add it
 gem 'dalli'
+gem 'redis-rails'
