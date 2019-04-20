@@ -44,6 +44,7 @@
 <% end %>
 
   <%= render 'new_comment' %>
+  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
   <%= render 'comments' %>
   <%= link_to 'Edit', edit_product_path(@product) %>
   <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
