@@ -1,5 +1,5 @@
 <div class="main-content">
-  <div class="row" data-product-id="<%= @product.id %>">
+  <div class ="data-product-id" data-product-id="<%= @product.id %>">
     <p id="notice"><%= notice %></p>
 
     <% cache @product do %>
@@ -28,8 +28,9 @@
       <strong>Price:</strong>
       <%= @product.price %>
     </p>
-
   </div>
+</div>
+
   <div>
     <p>Average Rating:
       <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div>
@@ -54,4 +55,3 @@
     <div class="pagination">
       <%= will_paginate @comments, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
     </div>
-</div>
